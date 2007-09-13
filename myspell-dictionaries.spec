@@ -1,7 +1,7 @@
 %define name      myspell-dictionaries
 # Define to "1.0" for OOo < 1.0.1
 %define myversion 1.0.2
-%define myrelease %mkrel 11
+%define myrelease %mkrel 12
 
 %if "%{version}" == "1.0"
 %define dictdir	%{_libdir}/myspell
@@ -142,7 +142,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT hr_HR 20020411 "Croatian (Croatia)" GPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT cs_CZ 20030907 "Czech (Czech Republic)" GPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT da_DK 20040609 "Danish (Denmark)" GPL)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT nl_NL 20070313 "Dutch (Netherlands)" LGPL)}
+%{expand:%(/bin/sh %{SOURCE0} DESC DICT nl_NL 20070606 "Dutch (Netherlands)" LGPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT en_CA 20020315 "English (Canada)" "Public Domain")}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT en_GB 20040208 "English (United Kingdom)" LGPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT en_US 20040623 "English (US)" BSD)}
@@ -164,7 +164,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT gl_ES 20030905 "Galician (Spain)" GPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT ru_RU 20040406 "Russian (Russia)" GPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT sl_SI 20030907 "Slovenian (Slovenia)" BSD-like)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT uk_UA 20031016 "Ukrainian (Ukraine)" LGPL)}
+%{expand:%(/bin/sh %{SOURCE0} DESC DICT uk_UA 20070529 "Ukrainian (Ukraine)" LGPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT de_AT 20030905 "German (Austria)"  GPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT en_AU 20030329 "English (Australian)" LGPL)}
 %{expand:%(/bin/sh %{SOURCE0} DESC DICT es_MX 20030818 "Spanish (Mexico)" GPL)}
