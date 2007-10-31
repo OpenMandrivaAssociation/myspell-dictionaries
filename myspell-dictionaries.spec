@@ -38,6 +38,7 @@ Source106: en_CA.zip
 Source107: en_GB.zip
 Source108: en_US.zip
 Source109: fr_FR.zip
+# This is actually de_DE_comb renamed in order to not mess the current spec.
 Source110: de_DE.zip
 Source111: de_CH.zip
 Source112: el_GR.zip
