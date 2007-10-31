@@ -1,18 +1,9 @@
-%define name      myspell-dictionaries
-# Define to "1.0" for OOo < 1.0.1
-%define version 1.0.2
-%define release %mkrel 12
-
-%if "%{version}" == "1.0"
-%define dictdir	%{_libdir}/myspell
-%else
 %define dictdir	%{_datadir}/dict/ooo
-%endif
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		myspell-dictionaries
+Version:	1.0.2
+Release:	%mkrel 12
 URL:		http://lingucomponent.openoffice.org/download_dictionary.html
 Source0:	myspell-genpackages.sh
 License:	BSD/GPL/LGPL
