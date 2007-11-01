@@ -3,7 +3,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	%mkrel 12
+Release:	%mkrel 13
 URL:		http://lingucomponent.openoffice.org/download_dictionary.html
 Source0:	myspell-genpackages.sh
 License:	BSD/GPL/LGPL
@@ -133,92 +133,52 @@ OpenOffice.org or any other MySpell-capable application, like
 Mozilla. myspell-hyph-* packages contain hyphenation dictionaries for
 a particular set of languages.
 
-# Spelling dictionaries
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT af_ZA "Afrikaans (Africa)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT bg_BG "Bulgarian (Bulgaria)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT ca_ES "Catalan" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT cs_CZ "Czech (Czech Republic)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT cy_GB "Welsh (Wales)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT da_DK "Danish (Denmark)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT de_AT "German (Austria)"  GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT de_CH "German (Switzerland)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT de_DE "German (Germany)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT el_GR "Greek (Greece)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT en_AU "English (Australian)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT en_CA "English (Canada)" "Public Domain" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT en_GB "English (United Kingdom)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT en_NZ "English (New Zealand)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT en_US "English (US)" BSD 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT es_ES "Spanish (Spain)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT es_MX "Spanish (Mexico)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT et_EE "Estonian (Estonia)" "free, see http://www.eki.ee/eki/licence.html" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT fo_FO "Faroese (Faroe Islands)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT fr_FR "French (France)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT ga_IE "Irish (Ireland)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT gl_ES "Galician (Spain)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT hr_HR "Croatian (Croatia)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT hu_HU "Hungarian (Hungary)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT id_ID "Indonesian (Indonesia)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT it_IT "Italian (Italy)" LGPL/GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT lt_LT "Lithuanian (Lithuania)" BSD-like 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT mi_NZ "Maori (New Zealand)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT ms_MY "Malay (Malaysia)" "GNU Free Documentation License" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT nb_NO "Norwegian/Bokmål (Norway)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT nl_NL "Dutch (Netherlands)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT nn_NO "Norwegian/Nynorsk (Norway)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT pl_PL "Polish (Poland)" "Creative Commons ShareAlike, http://creativecommons.org/licenses/sa/1.0" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT pt_BR "Portuguese (Brasil)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT pt_PT "Portuguese (Portugal)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT ro_RO "Romanian (Romania)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT ru_RU "Russian (Russia)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT sk_SK "Slovak (Slovak Republic)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT sl_SI "Slovenian (Slovenia)" BSD-like 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT sv_SE "Swedish (Sweden)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT sw_KE "Kiswahili (Africa)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT uk_UA "Ukrainian (Ukraine)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC DICT zu_ZA "Zulu (South Africa)" LGPL 2>/dev/null)}
-
-# Hyphenation
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH bg_BG "Bulgarian" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH cs_CZ "Czech" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH da_DK "Danish" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH de_CH "German" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH de_DE "German" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH el_GR "Greek" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH en_CA "English" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH en_GB "English" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH en_US "English" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH es_ES "Spanish" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH et_EE "Estonian" "free, see http://www.eki.ee/eki/licence.html" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH fi_FI "Finnish" "freely distributable" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH fr_BE "French" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH fr_FR "French" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH ga_IE "Irish" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH hu_HU "Hungarian" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH id_ID "Indonesian" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH is_IS "Icelandic" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH it_IT "Italian" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH lt_LT "Lithuanian" LPPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH nl_NL "Dutch" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH pl_PL "Polish" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH pt_BR "Brazilian Portuguese" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH pt_PT "Portuguese" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH ro_RO "Romanian (Romania)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH ru_RU "Russian" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH sk_SK "Slovak" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH sl_SI "Slovenian" "Copyright Matjaz Vrecko" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH sv_SE "Swedish" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC HYPH uk_UA "Ukrainian" GPL 2>/dev/null)}
-
-# Thesaurus
-%{expand:%(/bin/sh %{SOURCE0} DESC THES bg_BG "Bulgarian (Bulgaria)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES de_DE "German (Germany)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES en_US "English (US)" BSD 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES es_ES "Spanish (Spain)" LGPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES fr_FR "French (France)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES it_IT "Italian (Italy)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES pl_PL "Polish (Poland)" GPL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} DESC THES sk_SK "Slovak (Slovak Republic)" GPL 2>/dev/null)}
+%{expand:%(/bin/sh %{SOURCE0} af_ZA "DICT          " "Afrikaans (Africa)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} bg_BG "DICT          " "Bulgarian (Bulgaria)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} ca_ES "DICT          " "Catalan" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} cs_CZ "DICT HYPH     " "Czech (Czech Republic)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} cy_GB "DICT          " "Welsh (Wales)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} da_DK "DICT HYPH     " "Danish (Denmark)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} de_AT "DICT          " "German (Austria)"  GPL )}
+%{expand:%(/bin/sh %{SOURCE0} de_CH "DICT HYPH     " "German (Switzerland)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} de_DE "DICT HYPH THES" "German (Germany)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} el_GR "DICT HYPH     " "Greek (Greece)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} en_AU "DICT          " "English (Australian)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} en_CA "DICT HYPH     " "English (Canada)" "Public Domain" )}
+%{expand:%(/bin/sh %{SOURCE0} en_GB "DICT HYPH     " "English (United Kingdom)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} en_NZ "DICT          " "English (New Zealand)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} en_US "DICT HYPH THES" "English (US)" BSD )}
+%{expand:%(/bin/sh %{SOURCE0} es_ES "DICT HYPH THES" "Spanish (Spain)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} es_MX "DICT          " "Spanish (Mexico)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} et_EE "DICT HYPH     " "Estonian (Estonia)" "free, see http://www.eki.ee/eki/licence.html" )}
+%{expand:%(/bin/sh %{SOURCE0} fi_FI "     HYPH     " "Finnish" "freely distributable" )}
+%{expand:%(/bin/sh %{SOURCE0} fo_FO "DICT          " "Faroese (Faroe Islands)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} fr_BE "     HYPH     " "French" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} fr_FR "DICT HYPH THES" "French (France)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} ga_IE "DICT HYPH     " "Irish (Ireland)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} gl_ES "DICT          " "Galician (Spain)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} hr_HR "DICT          " "Croatian (Croatia)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} hu_HU "DICT HYPH     " "Hungarian (Hungary)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} id_ID "DICT HYPH     " "Indonesian (Indonesia)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} is_IS "     HYPH     " "Icelandic" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} it_IT "DICT HYPH THES" "Italian (Italy)" LGPL/GPL )}
+%{expand:%(/bin/sh %{SOURCE0} lt_LT "DICT HYPH     " "Lithuanian (Lithuania)" BSD-like )}
+%{expand:%(/bin/sh %{SOURCE0} mi_NZ "DICT          " "Maori (New Zealand)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} ms_MY "DICT          " "Malay (Malaysia)" "GNU Free Documentation License" )}
+%{expand:%(/bin/sh %{SOURCE0} nb_NO "DICT          " "Norwegian/Bokmål (Norway)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} nl_NL "DICT HYPH     " "Dutch (Netherlands)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} nn_NO "DICT          " "Norwegian/Nynorsk (Norway)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} pl_PL "DICT HYPH THES" "Polish (Poland)" "Creative Commons ShareAlike, http://creativecommons.org/licenses/sa/1.0" )}
+%{expand:%(/bin/sh %{SOURCE0} pt_BR "DICT HYPH     " "Portuguese (Brasil)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} pt_PT "DICT HYPH     " "Portuguese (Portugal)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} ro_RO "DICT HYPH     " "Romanian (Romania)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} ru_RU "DICT HYPH     " "Russian (Russia)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} sk_SK "DICT HYPH THES" "Slovak (Slovak Republic)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} sl_SI "DICT HYPH     " "Slovenian (Slovenia)" BSD-like )}
+%{expand:%(/bin/sh %{SOURCE0} sv_SE "DICT HYPH     " "Swedish (Sweden)" GPL )}
+%{expand:%(/bin/sh %{SOURCE0} sw_KE "DICT          " "Kiswahili (Africa)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} uk_UA "DICT HYPH     " "Ukrainian (Ukraine)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} zu_ZA "DICT          " "Zulu (South Africa)" LGPL )}
 
 %prep
 %setup -q -T -c
@@ -321,192 +281,4 @@ done
 %clean
 rm -rf %buildroot
 
-##
-## Scripts for spell checking
-##
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT af ZA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT bg BG 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT ca ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT cs CZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT cy GB 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT da DK 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT de AT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT de CH 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT de DE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT el GR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT en "GB ZA ZW" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT en AU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT en CA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT en NZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT en US 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT es "MX AR CO" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT es ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT et EE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT fo FO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT fr "FR BE" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT ga IE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT gl ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT hr HR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT hu HU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT id ID 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT it IT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT lt LT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT mi NZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT ms MY 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT nb NO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT nl NL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT nn NO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT pl PL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT pt BR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT pt PT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT ro RO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT ru RU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT sk SK 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT sl SI 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT sv SE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT sw KE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT uk UA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS DICT zu ZA 2>/dev/null)}
-
-##
-## Scripts for hyphenation
-##
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH bg_BG "BG" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH cs_CZ "CZ" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH da_DK "DA"  2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH de_CH "CH" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH de_DE "DE AT LI LU" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH el_GR "GR" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH en_CA "CA" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH en_GB "GB" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH en_US "US NZ AU ZA IE JM PH TT ZW" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH es_ES "ES AR BZ BO CL CO CR CU DO EC SV GU JN MX NI PA PU PE PR UY VE" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH et_EE "EE" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH fi_FI "FI" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH fr_BE "BE" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH fr_FR "FR CA LU MC CH" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH ga_IE "IE" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH hu_HU "HU" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH id_ID "ID" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH is_IS "IS" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH it_IT "IT CH" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH lt_LT "LT" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH nl_NL "NL" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH pl_PL "PL" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH pt_BR "BR" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH pt_PT "PT" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH ro_RO "RO" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH ru_RU "RU" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH sk_SK "SK" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH sl_SI "SI" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH sv_SE "SE" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS HYPH uk_UA "UA" 2>/dev/null)}
-
-##
-## Scripts for thesaurus
-##
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES bg_BG "BG" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES de_DE "DE AT CH LI LU" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES en_US "US CA GB AU BZ IE JM NZ PH TT ZA ZW" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES es_ES "ES AR" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES fr_FR "FR BE CA CH LU MC" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES it_IT "IT" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES pl_PL "PL" 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} SCRIPTS THES sk_SK "SK" 2>/dev/null)}
-
-##
-## Files for spell checking
-##
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT af_ZA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT bg_BG 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT ca_ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT cs_CZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT cy_GB 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT da_DK 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT de_AT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT de_CH 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT de_DE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT el_GR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT en_AU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT en_CA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT en_GB 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT en_NZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT en_US 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT es_ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT es_MX 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT et_EE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT fo_FO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT fr_FR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT ga_IE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT gl_ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT hr_HR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT hu_HU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT id_ID 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT it_IT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT lt_LT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT mi_NZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT ms_MY 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT nb_NO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT nl_NL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT nn_NO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT pl_PL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT pt_BR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT pt_PT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT ro_RO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT ru_RU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT sk_SK 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT sl_SI 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT sv_SE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT sw_KE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT uk_UA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES DICT zu_ZA 2>/dev/null)}
-
-##
-## Files for hyphenation
-##
-
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH bg_BG 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH cs_CZ 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH da_DK 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH de_CH 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH de_DE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH el_GR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH en_CA 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH en_GB 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH en_US 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH es_ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH et_EE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH fi_FI 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH fr_BE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH fr_FR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH ga_IE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH hu_HU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH id_ID 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH is_IS 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH it_IT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH lt_LT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH nl_NL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH pl_PL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH pt_BR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH pt_PT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH ro_RO 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH ru_RU 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH sk_SK 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH sl_SI 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH sv_SE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES HYPH uk_UA 2>/dev/null)}
-
-#
-# Files for thesaurus
-#
-%{expand:%(/bin/sh %{SOURCE0} FILES THES bg_BG BG 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES de_DE DE 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES en_US US 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES es_ES ES 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES fr_FR FR 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES it_IT IT 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES pl_PL PL 2>/dev/null)}
-%{expand:%(/bin/sh %{SOURCE0} FILES THES sk_SK SK 2>/dev/null)}
 %nil
-
-
