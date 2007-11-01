@@ -71,6 +71,56 @@ Source140: mi_NZ.zip
 Source141: sw_KE.zip
 Source142: ms_MY.zip
 
+Source143: am_AM.zip
+Source144: ar_AR.zip
+Source145: az_AZ.zip
+Source146: bn_BN.zip
+Source147: cop_EG.zip
+Source148: csb_CSB.zip
+Source149: en_ZA.zip
+Source150: eo_EO.zip
+Source151: eu_ES.zip
+Source152: fa_FA.zip
+Source153: fa_IR.zip
+Source155: fj_FJ.zip
+Source156: fur_IT.zip
+Source157: fy_NL.zip
+Source158: gd_GB.zip
+Source159: gsc_FR.zip
+Source160: he_IL.zip
+Source161: hi_IN.zip
+Source162: hy_AM.zip
+Source164: is_IS.zip
+Source163: th_TH.zip
+Source165: km_KH.zip
+Source166: ku_TR.zip
+Source167: la_LA.zip
+Source168: lv_LV.zip
+Source169: mg_MG.zip
+Source170: mn_MN.zip
+Source171: mr_IN.zip
+Source172: ne_NP.zip
+Source173: nr_ZA.zip
+Source174: ns_ZA.zip
+Source175: ny_MW.zip
+Source176: oc_FR.zip
+Source177: or_OR.zip
+Source178: pa_PA.zip
+Source179: qu_BO.zip
+Source180: rw_RW.zip
+Source181: ss_ZA.zip
+Source182: st_ZA.zip
+Source183: sw_TZ.zip
+Source184: ta_TA.zip
+Source185: tet_ID.zip
+Source186: tl_PH.zip
+Source187: tn_ZA.zip
+Source188: ts_ZA.zip
+Source190: uz_UZ.zip
+Source191: ve_ZA.zip
+Source192: vi_VI.zip
+Source193: xh_ZA.zip
+
 ##
 ## Sources for hyphenation dictionaries
 ##
@@ -123,6 +173,11 @@ Source305: th_es_ES.zip
 Source306: th_bg_BG.zip
 Source307: th_sk_SK.zip
 
+Source309: th_cs_CZ.zip
+Source310: th_de_CH.zip
+Source311: th_hu_HU.zip
+Source312: th_ru_RU.zip
+
 ##
 ## Packages information
 ##
@@ -134,13 +189,19 @@ Mozilla. myspell-hyph-* packages contain hyphenation dictionaries for
 a particular set of languages.
 
 %{expand:%(/bin/sh %{SOURCE0} af_ZA "DICT          " "Afrikaans (Africa)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} am_AM "DICT          " "Amharic (Ethiopia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ar_AR "DICT          " "Arabic (North Africa and Middle East)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} az_AZ "DICT          " "Azerbaijani (Azerbaijan)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} bg_BG "DICT          " "Bulgarian (Bulgaria)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} bn_BN "DICT          " "Bengali (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} ca_ES "DICT          " "Catalan" GPL 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} cs_CZ "DICT HYPH     " "Czech (Czech Republic)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} cop_EG "DICT          " "Coptic (North Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} cs_CZ "DICT HYPH THES" "Czech (Czech Republic)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} csb_CSB "DICT          " "Kashubian (Poland)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} cy_GB "DICT          " "Welsh (Wales)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} da_DK "DICT HYPH     " "Danish (Denmark)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} de_AT "DICT          " "German (Austria)"  GPL 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} de_CH "DICT HYPH     " "German (Switzerland)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} de_CH "DICT HYPH THES" "German (Switzerland)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} de_DE "DICT HYPH THES" "German (Germany)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} el_GR "DICT HYPH     " "Greek (Greece)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} en_AU "DICT          " "English (Australian)" LGPL 2>/dev/null )}
@@ -148,36 +209,78 @@ a particular set of languages.
 %{expand:%(/bin/sh %{SOURCE0} en_GB "DICT HYPH     " "English (United Kingdom)" LGPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} en_NZ "DICT          " "English (New Zealand)" LGPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} en_US "DICT HYPH THES" "English (US)" BSD 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} en_ZA "DICT          " "English (South Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} eo_EO "DICT          " "Esperanto (anywhere)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} es_ES "DICT HYPH THES" "Spanish (Spain)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} es_MX "DICT          " "Spanish (Mexico)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} et_EE "DICT HYPH     " "Estonian (Estonia)" "free, see http://www.eki.ee/eki/licence.html" 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} fi_FI "     HYPH     " "Finnish" "freely distributable" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} eu_ES "DICT          " "Basque" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fa_FA "DICT          " "Farsi (Iran)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fa_IR "DICT          " "Persian (Iran)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fi_FI "     HYPH     " "Finnish (Finland)" "freely distributable" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fj_FJ "DICT          " "Fijian (Fiji)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} fo_FO "DICT          " "Faroese (Faroe Islands)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} fr_BE "     HYPH     " "French" LGPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} fr_FR "DICT HYPH THES" "French (France)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fur_IT "DICT          " "Friulian (north-east Italy)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fy_NL "DICT          " "Frisian (Netherlands)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} ga_IE "DICT HYPH     " "Irish (Ireland)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} gd_GB "DICT          " "Scottish Gaelic (Scotland)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} gl_ES "DICT          " "Galician (Spain)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} gsc_FR "DICT          " "Gascon (France)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} he_IL "DICT          " "Hebrew (Israel)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} hi_IN "DICT          " "Hindi (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} hr_HR "DICT          " "Croatian (Croatia)" GPL 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} hu_HU "DICT HYPH     " "Hungarian (Hungary)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} hu_HU "DICT HYPH THES" "Hungarian (Hungary)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} hy_AM "DICT          " "Armenian (Eastern and Western)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} id_ID "DICT HYPH     " "Indonesian (Indonesia)" GPL 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} is_IS "     HYPH     " "Icelandic" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} is_IS "DICT HYPH     " "Icelandic (Iceland)" LGPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} it_IT "DICT HYPH THES" "Italian (Italy)" LGPL/GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} km_KH "DICT          " "Khmer (Cambodia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ku_TR "DICT          " "Kurdish (Iran)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} la_LA "DICT          " "Latin (x-register)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} lt_LT "DICT HYPH     " "Lithuanian (Lithuania)" BSD-like 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} lv_LV "DICT          " "Latvian (Latvia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} mg_MG "DICT          " "Malagasy (Madagascar)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} mi_NZ "DICT          " "Maori (New Zealand)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} mn_MN "DICT          " "Mongolian (Mongolia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} mr_IN "DICT          " "Marathi (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} ms_MY "DICT          " "Malay (Malaysia)" "GNU Free Documentation License" 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} nb_NO "DICT          " "Norwegian/Bokmål (Norway)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} nb_NO "DICT          " "Norwegian/Bokmel (Norway)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ne_NP "DICT          " "Nepali (Nepal)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} nl_NL "DICT HYPH     " "Dutch (Netherlands)" LGPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} nn_NO "DICT          " "Norwegian/Nynorsk (Norway)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} nr_ZA "DICT          " "Ndebele (South Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ns_ZA "DICT          " "Northern Sotho (South Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ny_MW "DICT          " "Chichewa (Malawi)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} oc_FR "DICT          " "Occitan (France)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} or_OR "DICT          " "Oriya (India)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} pa_PA "DICT          " "Punjabi (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} pl_PL "DICT HYPH THES" "Polish (Poland)" "Creative Commons ShareAlike, http://creativecommons.org/licenses/sa/1.0" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} pt_BR "DICT HYPH     " "Portuguese (Brasil)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} pt_PT "DICT HYPH     " "Portuguese (Portugal)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} qu_BO "DICT          " "Quechua (Bolivia)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} ro_RO "DICT HYPH     " "Romanian (Romania)" GPL 2>/dev/null )}
-%{expand:%(/bin/sh %{SOURCE0} ru_RU "DICT HYPH     " "Russian (Russia)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ru_RU "DICT HYPH THES" "Russian (Russia)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} rw_RW "DICT          " "Kinyarwanda (Rwanda)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} sk_SK "DICT HYPH THES" "Slovak (Slovak Republic)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} sl_SI "DICT HYPH     " "Slovenian (Slovenia)" BSD-like 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ss_ZA "DICT          " "Swazi/Swati (South Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} st_ZA "DICT          " "Southern Sotho (South Africa)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} sv_SE "DICT HYPH     " "Swedish (Sweden)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} sw_KE "DICT          " "Kiswahili (Africa)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} sw_TZ "DICT          " "Kiswahili (East Africa) Extended Wordlist" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ta_TA "DICT          " "Tamil (India)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} tet_ID "DICT          " "Tetum (Indonesia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} th_TH "DICT          " "Thai (Thailand)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} tl_PH "DICT          " "Tagalog (Philippines)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} tn_ZA "DICT          " "Setswana (Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ts_ZA "DICT          " "Tsonga (South Africa)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} uk_UA "DICT HYPH     " "Ukrainian (Ukraine)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} uz_UZ "DICT          " "Uzbek (Uzbekistan)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ve_ZA "DICT          " "Venda (South Africa)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} vi_VI "DICT          " "Vietnamese (Vietnam)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} xh_ZA "DICT          " "Xhosa (South Africa)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{SOURCE0} zu_ZA "DICT          " "Zulu (South Africa)" LGPL 2>/dev/null )}
 
 %prep
@@ -192,7 +295,17 @@ for dictfile in %{SOURCE100} %{SOURCE101} %{SOURCE102} %{SOURCE103} %{SOURCE104}
 		%{SOURCE125} %{SOURCE126} %{SOURCE127} %{SOURCE128} %{SOURCE129} \
 		%{SOURCE130} %{SOURCE131} %{SOURCE132} %{SOURCE133} %{SOURCE134} \
 		%{SOURCE135} %{SOURCE136} %{SOURCE137} %{SOURCE138} %{SOURCE139} \
-		%{SOURCE140} %{SOURCE141} %{SOURCE142}
+		%{SOURCE140} %{SOURCE141} %{SOURCE142} %{SOURCE143} %{SOURCE144} \
+		%{SOURCE145} %{SOURCE146} %{SOURCE147} %{SOURCE148} %{SOURCE149} \
+		%{SOURCE150} %{SOURCE151} %{SOURCE152} %{SOURCE153}              \
+		%{SOURCE155} %{SOURCE156} %{SOURCE157} %{SOURCE158} %{SOURCE159} \
+		%{SOURCE160} %{SOURCE161} %{SOURCE162} %{SOURCE163} %{SOURCE164} \
+		%{SOURCE165} %{SOURCE166} %{SOURCE167} %{SOURCE168} %{SOURCE169} \
+		%{SOURCE170} %{SOURCE171} %{SOURCE172} %{SOURCE173} %{SOURCE174} \
+		%{SOURCE175} %{SOURCE176} %{SOURCE177} %{SOURCE178} %{SOURCE179} \
+		%{SOURCE180} %{SOURCE181} %{SOURCE182} %{SOURCE183} %{SOURCE184} \
+		%{SOURCE185} %{SOURCE186} %{SOURCE187} %{SOURCE188}              \
+		%{SOURCE190} %{SOURCE191} %{SOURCE192} %{SOURCE193}
 do
   basefile="${dictfile##*/}"
   langpack="${basefile/.zip/}"
@@ -238,7 +351,8 @@ done
 
 # Handle thesaurus dictionaries
 for thesfile in %{SOURCE300} %{SOURCE301} %{SOURCE302} %{SOURCE303} %{SOURCE304} \
-		%{SOURCE305} %{SOURCE306} %{SOURCE307}
+		%{SOURCE305} %{SOURCE306} %{SOURCE307}              %{SOURCE309} \
+		%{SOURCE310} %{SOURCE311} %{SOURCE312}
 do
   basefile="${thesfile##*/}"
   langpack="${basefile/.zip/}"
