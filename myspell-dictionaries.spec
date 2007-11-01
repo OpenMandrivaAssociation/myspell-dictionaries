@@ -133,52 +133,52 @@ OpenOffice.org or any other MySpell-capable application, like
 Mozilla. myspell-hyph-* packages contain hyphenation dictionaries for
 a particular set of languages.
 
-%{expand:%(/bin/sh %{SOURCE0} af_ZA "DICT          " "Afrikaans (Africa)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} bg_BG "DICT          " "Bulgarian (Bulgaria)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} ca_ES "DICT          " "Catalan" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} cs_CZ "DICT HYPH     " "Czech (Czech Republic)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} cy_GB "DICT          " "Welsh (Wales)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} da_DK "DICT HYPH     " "Danish (Denmark)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} de_AT "DICT          " "German (Austria)"  GPL )}
-%{expand:%(/bin/sh %{SOURCE0} de_CH "DICT HYPH     " "German (Switzerland)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} de_DE "DICT HYPH THES" "German (Germany)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} el_GR "DICT HYPH     " "Greek (Greece)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} en_AU "DICT          " "English (Australian)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} en_CA "DICT HYPH     " "English (Canada)" "Public Domain" )}
-%{expand:%(/bin/sh %{SOURCE0} en_GB "DICT HYPH     " "English (United Kingdom)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} en_NZ "DICT          " "English (New Zealand)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} en_US "DICT HYPH THES" "English (US)" BSD )}
-%{expand:%(/bin/sh %{SOURCE0} es_ES "DICT HYPH THES" "Spanish (Spain)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} es_MX "DICT          " "Spanish (Mexico)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} et_EE "DICT HYPH     " "Estonian (Estonia)" "free, see http://www.eki.ee/eki/licence.html" )}
-%{expand:%(/bin/sh %{SOURCE0} fi_FI "     HYPH     " "Finnish" "freely distributable" )}
-%{expand:%(/bin/sh %{SOURCE0} fo_FO "DICT          " "Faroese (Faroe Islands)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} fr_BE "     HYPH     " "French" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} fr_FR "DICT HYPH THES" "French (France)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} ga_IE "DICT HYPH     " "Irish (Ireland)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} gl_ES "DICT          " "Galician (Spain)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} hr_HR "DICT          " "Croatian (Croatia)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} hu_HU "DICT HYPH     " "Hungarian (Hungary)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} id_ID "DICT HYPH     " "Indonesian (Indonesia)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} is_IS "     HYPH     " "Icelandic" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} it_IT "DICT HYPH THES" "Italian (Italy)" LGPL/GPL )}
-%{expand:%(/bin/sh %{SOURCE0} lt_LT "DICT HYPH     " "Lithuanian (Lithuania)" BSD-like )}
-%{expand:%(/bin/sh %{SOURCE0} mi_NZ "DICT          " "Maori (New Zealand)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} ms_MY "DICT          " "Malay (Malaysia)" "GNU Free Documentation License" )}
-%{expand:%(/bin/sh %{SOURCE0} nb_NO "DICT          " "Norwegian/Bokmål (Norway)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} nl_NL "DICT HYPH     " "Dutch (Netherlands)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} nn_NO "DICT          " "Norwegian/Nynorsk (Norway)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} pl_PL "DICT HYPH THES" "Polish (Poland)" "Creative Commons ShareAlike, http://creativecommons.org/licenses/sa/1.0" )}
-%{expand:%(/bin/sh %{SOURCE0} pt_BR "DICT HYPH     " "Portuguese (Brasil)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} pt_PT "DICT HYPH     " "Portuguese (Portugal)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} ro_RO "DICT HYPH     " "Romanian (Romania)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} ru_RU "DICT HYPH     " "Russian (Russia)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} sk_SK "DICT HYPH THES" "Slovak (Slovak Republic)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} sl_SI "DICT HYPH     " "Slovenian (Slovenia)" BSD-like )}
-%{expand:%(/bin/sh %{SOURCE0} sv_SE "DICT HYPH     " "Swedish (Sweden)" GPL )}
-%{expand:%(/bin/sh %{SOURCE0} sw_KE "DICT          " "Kiswahili (Africa)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} uk_UA "DICT HYPH     " "Ukrainian (Ukraine)" LGPL )}
-%{expand:%(/bin/sh %{SOURCE0} zu_ZA "DICT          " "Zulu (South Africa)" LGPL )}
+%{expand:%(/bin/sh %{SOURCE0} af_ZA "DICT          " "Afrikaans (Africa)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} bg_BG "DICT          " "Bulgarian (Bulgaria)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ca_ES "DICT          " "Catalan" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} cs_CZ "DICT HYPH     " "Czech (Czech Republic)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} cy_GB "DICT          " "Welsh (Wales)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} da_DK "DICT HYPH     " "Danish (Denmark)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} de_AT "DICT          " "German (Austria)"  GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} de_CH "DICT HYPH     " "German (Switzerland)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} de_DE "DICT HYPH THES" "German (Germany)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} el_GR "DICT HYPH     " "Greek (Greece)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} en_AU "DICT          " "English (Australian)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} en_CA "DICT HYPH     " "English (Canada)" "Public Domain" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} en_GB "DICT HYPH     " "English (United Kingdom)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} en_NZ "DICT          " "English (New Zealand)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} en_US "DICT HYPH THES" "English (US)" BSD 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} es_ES "DICT HYPH THES" "Spanish (Spain)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} es_MX "DICT          " "Spanish (Mexico)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} et_EE "DICT HYPH     " "Estonian (Estonia)" "free, see http://www.eki.ee/eki/licence.html" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fi_FI "     HYPH     " "Finnish" "freely distributable" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fo_FO "DICT          " "Faroese (Faroe Islands)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fr_BE "     HYPH     " "French" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} fr_FR "DICT HYPH THES" "French (France)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ga_IE "DICT HYPH     " "Irish (Ireland)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} gl_ES "DICT          " "Galician (Spain)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} hr_HR "DICT          " "Croatian (Croatia)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} hu_HU "DICT HYPH     " "Hungarian (Hungary)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} id_ID "DICT HYPH     " "Indonesian (Indonesia)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} is_IS "     HYPH     " "Icelandic" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} it_IT "DICT HYPH THES" "Italian (Italy)" LGPL/GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} lt_LT "DICT HYPH     " "Lithuanian (Lithuania)" BSD-like 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} mi_NZ "DICT          " "Maori (New Zealand)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ms_MY "DICT          " "Malay (Malaysia)" "GNU Free Documentation License" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} nb_NO "DICT          " "Norwegian/Bokmål (Norway)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} nl_NL "DICT HYPH     " "Dutch (Netherlands)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} nn_NO "DICT          " "Norwegian/Nynorsk (Norway)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} pl_PL "DICT HYPH THES" "Polish (Poland)" "Creative Commons ShareAlike, http://creativecommons.org/licenses/sa/1.0" 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} pt_BR "DICT HYPH     " "Portuguese (Brasil)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} pt_PT "DICT HYPH     " "Portuguese (Portugal)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ro_RO "DICT HYPH     " "Romanian (Romania)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} ru_RU "DICT HYPH     " "Russian (Russia)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} sk_SK "DICT HYPH THES" "Slovak (Slovak Republic)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} sl_SI "DICT HYPH     " "Slovenian (Slovenia)" BSD-like 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} sv_SE "DICT HYPH     " "Swedish (Sweden)" GPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} sw_KE "DICT          " "Kiswahili (Africa)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} uk_UA "DICT HYPH     " "Ukrainian (Ukraine)" LGPL 2>/dev/null )}
+%{expand:%(/bin/sh %{SOURCE0} zu_ZA "DICT          " "Zulu (South Africa)" LGPL 2>/dev/null )}
 
 %prep
 %setup -q -T -c
