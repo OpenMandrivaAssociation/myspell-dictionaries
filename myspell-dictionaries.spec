@@ -1,9 +1,10 @@
 %define dictdir	%{_datadir}/dict/ooo
+%define mozdictdir %{_datadir}/dict/mozilla
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	%mkrel 14
+Release:	%mkrel 15
 URL:		http://lingucomponent.openoffice.org/download_dictionary.html
 Source0:	myspell-genpackages.sh
 License:	BSD/GPL/LGPL
@@ -287,7 +288,7 @@ a particular set of languages.
 %setup -q -T -c
 
 # Handle spelling dictionaries
-for dictfile in %{SOURCE100} %{SOURCE101} %{SOURCE102} %{SOURCE103} %{SOURCE104} \
+all_dicts="%{SOURCE100} %{SOURCE101} %{SOURCE102} %{SOURCE103} %{SOURCE104} \
 		%{SOURCE105} %{SOURCE106} %{SOURCE107} %{SOURCE108} %{SOURCE109} \
 		%{SOURCE110} %{SOURCE111} %{SOURCE112} %{SOURCE113} %{SOURCE114} \
 		%{SOURCE115} %{SOURCE116} %{SOURCE117} %{SOURCE118} %{SOURCE119} \
@@ -305,7 +306,8 @@ for dictfile in %{SOURCE100} %{SOURCE101} %{SOURCE102} %{SOURCE103} %{SOURCE104}
 		%{SOURCE175} %{SOURCE176} %{SOURCE177} %{SOURCE178} %{SOURCE179} \
 		%{SOURCE180} %{SOURCE181} %{SOURCE182} %{SOURCE183} %{SOURCE184} \
 		%{SOURCE185} %{SOURCE186} %{SOURCE187} %{SOURCE188}              \
-		%{SOURCE190} %{SOURCE191} %{SOURCE192} %{SOURCE193}
+		%{SOURCE190} %{SOURCE191} %{SOURCE192} %{SOURCE193}"
+for dictfile in $all_dicts
 do
   basefile="${dictfile##*/}"
   langpack="${basefile/.zip/}"
@@ -322,6 +324,16 @@ EOF
   fi
   # fix permissions
   chmod 644 doc/DICT/$langpack/*
+  # add symlinks for mozilla apps
+  mkdir -p moz
+  lang=$(echo $langpack|sed 's/_.*//')
+  if [ $(echo $all_dicts |tr ' ' \\n |grep /${lang}_ |wc -l) \> 1 ]; then
+    lang=$(echo $langpack |tr _ -)
+  fi
+  ln -s ../ooo/$langpack.aff moz/$lang.aff
+  ln -s ../ooo/$langpack.dic moz/$lang.dic
+  echo %{mozdictdir}/$lang.aff > $langpack.files
+  echo %{mozdictdir}/$lang.dic >> $langpack.files
 done
 
 # Handle spelling dictionaries
@@ -390,6 +402,13 @@ done
 # Install thesaurus dictionaries
 for file in dic/THES/*/*; do
   install -m 644 $file %buildroot%{dictdir}/${file##*/}
+done
+
+# Install the spell checking dictionary symlinks for mozilla apps
+mkdir -p %buildroot%{mozdictdir}/
+
+for file in moz/*; do
+  cp -P $file %buildroot%{mozdictdir}/${file##*/}
 done
 
 %clean
