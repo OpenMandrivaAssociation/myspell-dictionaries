@@ -9,6 +9,7 @@ URL:		http://lingucomponent.openoffice.org/download_dictionary.html
 Source0:	myspell-genpackages.sh
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 BuildRequires:	unzip
 
