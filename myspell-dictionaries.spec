@@ -1,10 +1,12 @@
 %define dictdir	%{_datadir}/dict/ooo
 %define mozdictdir %{_datadir}/dict/mozilla
 
+%define _binary_payload w9.lzdio
+
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	%mkrel 16
+Release:	%mkrel 17
 URL:		http://lingucomponent.openoffice.org/download_dictionary.html
 Source0:	myspell-genpackages.sh
 License:	BSD/GPL/LGPL
@@ -316,6 +318,9 @@ do
   unzip -d doc/DICT/$langpack $dictfile
   mkdir -p dic/DICT/$langpack
   mv doc/DICT/$langpack/$langpack.{aff,dic} dic/DICT/$langpack
+  # Protect against #36685
+  rm -f doc/DICT/$langpack/*.aff 2> /dev/null
+  rm -f doc/DICT/$langpack/*.dic 2> /dev/null
   # create dummy file if docdir is empty
   if ! ls doc/DICT/$langpack/* ; then
 cat > doc/DICT/$langpack/README_$langpack.txt << EOF
@@ -351,6 +356,8 @@ do
   unzip -d doc/HYPH/$langpack $hyphfile
   mkdir -p dic/HYPH/$langpack
   mv doc/HYPH/$langpack/$langpack.dic dic/HYPH/$langpack
+  # Protect against #36685
+  rm -f doc/HYPH/$langpack/*.dic 2> /dev/null
   # create dummy file if docdir is empty
   if ! ls doc/HYPH/$langpack/* ; then
 cat > doc/HYPH/$langpack/README_$langpack.txt << EOF
@@ -373,6 +380,9 @@ do
   unzip -d doc/THES/$langpack $thesfile
   mkdir -p dic/THES/$langpack
   mv doc/THES/$langpack/$langpack.{dat,idx} dic/THES/$langpack
+  # Protect against #36685
+  rm -f doc/THES/$langpack/*.dat 2> /dev/null
+  rm -f doc/THES/$langpack/*.idx 2> /dev/null
   # create dummy file if docdir is empty
   if ! ls doc/THES/$langpack/* ; then
 cat > doc/THES/$langpack/README_$langpack.txt << EOF
@@ -382,6 +392,12 @@ EOF
   # fix permissions
   chmod 644 doc/THES/$langpack/*
 done
+
+# protect against #36685
+[ -n "$(find doc/ -name '*.dic')" ] && exit 1
+[ -n "$(find doc/ -name '*.aff')" ] && exit 1
+[ -n "$(find doc/ -name '*.dat')" ] && exit 1
+[ -n "$(find doc/ -name '*.idx')" ] && exit 1
 
 %build
 
