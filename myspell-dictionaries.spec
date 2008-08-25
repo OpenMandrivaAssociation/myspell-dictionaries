@@ -6,14 +6,14 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	%mkrel 21
-URL:		http://lingucomponent.openoffice.org/download_dictionary.html
-Source0:	myspell-genpackages.sh
+Release:	%mkrel 22
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+URL:		http://lingucomponent.openoffice.org/download_dictionary.html
+Source0:	myspell-genpackages.sh
 BuildArch:	noarch
 BuildRequires:	unzip
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 ##
 ## Sources for spell checking dictionaries
