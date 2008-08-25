@@ -11,7 +11,7 @@ URL:		http://lingucomponent.openoffice.org/download_dictionary.html
 Source0:	myspell-genpackages.sh
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildArch:	noarch
 BuildRequires:	unzip
 
@@ -39,7 +39,8 @@ Source112: el_GR.zip
 Source113: hu_HU.zip
 Source114: it_IT.zip
 
-# From http://www.kurnik.pl/dictionary/alt-myspell-pl-20040816.tar.bz2
+# (tpg) MySpell dictionary comes from http://www.sjp.pl/slownik/ort/
+# unzip http://sjp.pl/slownik/ort/sjp-myspell-pl-20080825.zip
 Source115: pl_PL.zip
 
 Source116: pt_PT.zip
@@ -402,32 +403,32 @@ done
 %build
 
 %install
-rm -rf %buildroot
-mkdir -p %buildroot%{dictdir}/
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{dictdir}/
 
 # Install spell checking dictionaries
 for file in dic/DICT/*/*; do
-  install -m 644 $file %buildroot%{dictdir}/${file##*/}
+  install -m 644 $file %{buildroot}%{dictdir}/${file##*/}
 done
 
 # Install hyphenation dictionaries
 for file in dic/HYPH/*/*; do
-  install -m 644 $file %buildroot%{dictdir}/${file##*/}
+  install -m 644 $file %{buildroot}%{dictdir}/${file##*/}
 done
 
 # Install thesaurus dictionaries
 for file in dic/THES/*/*; do
-  install -m 644 $file %buildroot%{dictdir}/${file##*/}
+  install -m 644 $file %{buildroot}%{dictdir}/${file##*/}
 done
 
 # Install the spell checking dictionary symlinks for mozilla apps
-mkdir -p %buildroot%{mozdictdir}/
+mkdir -p %{buildroot}%{mozdictdir}/
 
 for file in moz/*; do
-  cp -P $file %buildroot%{mozdictdir}/${file##*/}
+  cp -P $file %{buildroot}%{mozdictdir}/${file##*/}
 done
 
 %clean
-rm -rf %buildroot
+rm -rf %{buildroot}
 
 %nil
