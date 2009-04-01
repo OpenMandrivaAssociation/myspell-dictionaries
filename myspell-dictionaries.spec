@@ -6,7 +6,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	%mkrel 26
+Release:	%mkrel 27
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 URL:		http://lingucomponent.openoffice.org/download_dictionary.html
@@ -46,6 +46,7 @@ Source115: pl_PL.zip
 Source116: pt_PT.zip
 Source117: pt_BR.zip
 Source118: es_ES.zip
+# http://www.sk-spell.sk.cx/file_download/63/hunspell-sk-20090330.zip
 Source119: sk_SK.zip
 Source120: sv_SE.zip
 Source121: nb_NO.zip
@@ -175,6 +176,8 @@ Source304: th_pl_PL.zip
 Source305: th_es_ES.zip
 ## http://bgoffice.sourceforge.net/ooo/
 Source306: th_bg_BG.zip
+# http://www.sk-spell.sk.cx/thesaurus/download/OOo-Thesaurus2-sk_SK.zip
+# (2009-03-30)
 Source307: th_sk_SK.zip
 
 Source309: th_cs_CZ.zip
