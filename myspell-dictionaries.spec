@@ -6,7 +6,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	32
+Release:	%mkrel 32
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 URL:		http://lingucomponent.openoffice.org/download_dictionary.html
@@ -444,3 +444,244 @@ done
 rm -rf %{buildroot}
 
 %nil
+
+
+%changelog
+* Tue Feb 21 2012 abf
+- The release updated by ABF
+
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.2-31mdv2011.0
++ Revision: 666504
+- mass rebuild
+
+* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 1.0.2-30mdv2011.0
++ Revision: 606672
+- rebuild
+
+* Tue Nov 10 2009 Rafael da Veiga Cabral <cabral@mandriva.com> 1.0.2-29mdv2010.1
++ Revision: 464138
+- increment rel
+
+* Tue Nov 10 2009 Rafael da Veiga Cabral <cabral@mandriva.com> 1.0.2-28mdv2010.1
++ Revision: 464129
+- add the updated pt_BR dictionary and hypenation with new Portuguese
+  spelling agreement, ripped from Vero 2.0.6 extension
+
+* Tue Oct 20 2009 Frederik Himpe <fhimpe@mandriva.org> 1.0.2-28mdv2010.0
++ Revision: 458456
+- Update Dutch dictionaries to version 1.10 from http://www.opentaal.org
+
+* Thu Apr 02 2009 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 1.0.2-27mdv2009.1
++ Revision: 363427
+- Updated thesaurus/dictionary for sk_SK (request/report by Zdenko
+  Podobny).
+
+* Wed Mar 18 2009 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 1.0.2-26mdv2009.1
++ Revision: 357492
+- Avoid marking dictionary files with lang tag, to workaround locales
+  vs. _install_langs macro issue and myspell installation at same rpm
+  transaction (https://qa.mandriva.com/show_bug.cgi?id=42782).
+
+* Wed Mar 11 2009 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 1.0.2-25mdv2009.1
++ Revision: 353883
+- Fix installation of some myspell dictionary packages, because of
+  requiring wrong or non-existant locales packages (#48131).
+
+* Sun Feb 08 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 1.0.2-24mdv2009.1
++ Revision: 338611
+- update polish dictionary
+
+* Tue Sep 23 2008 Rafael da Veiga Cabral <cabral@mandriva.com> 1.0.2-23mdv2009.0
++ Revision: 287379
+- OpenOffice.org 3.0 needs "_v2" under thesaurus name files - #42885
+
+* Mon Aug 25 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 1.0.2-22mdv2009.0
++ Revision: 275776
+- cosmetics
+- update polish myspell dictionary
+- spec file clean
+
+* Wed Jul 16 2008 Rafael da Veiga Cabral <cabral@mandriva.com> 1.0.2-21mdv2009.0
++ Revision: 236627
+- Replace th_en_US.zip for a working version for American English.
+- Replace th_en_US.zip (#38132#24) to a working thesaurus file.
+
+* Thu May 29 2008 Rafael da Veiga Cabral <cabral@mandriva.com> 1.0.2-20mdv2009.0
++ Revision: 212837
+- Updating thesaurus (fr_FR, de_DE, es_ES, cs_CZ, pl_PL, hu_HU, sk_SK). Motivation:#38132.
+- The files were got from http://wiki.services.openoffice.org/wiki/Dictionaries
+
+* Sun Mar 09 2008 Anssi Hannula <anssi@mandriva.org> 1.0.2-19mdv2008.1
++ Revision: 182393
+- provide enchant-dictionary in dictionary packages
+
+* Wed Feb 20 2008 Marcelo Ricardo Leitner <mrl@mandriva.com> 1.0.2-18mdv2008.1
++ Revision: 173195
+- Fix #37853: Third column should be the country code, and not full locale.
+
+* Tue Jan 15 2008 Marcelo Ricardo Leitner <mrl@mandriva.com> 1.0.2-17mdv2008.1
++ Revision: 152818
+- Removed dicts from doc dir. Closes: #36685
+- Compress with lzma and saves up to 25%
+
+* Wed Jan 09 2008 Marcelo Ricardo Leitner <mrl@mandriva.com> 1.0.2-16mdv2008.1
++ Revision: 147165
+- Added %%lang() tags to dicts, as requested by Blino.
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sat Dec 01 2007 Christiaan Welvaart <spturtle@mandriva.org> 1.0.2-15mdv2008.1
++ Revision: 114314
+- add symlinks for mozilla-based apps
+
+* Thu Nov 01 2007 Marcelo Ricardo Leitner <mrl@mandriva.com> 1.0.2-14mdv2008.1
++ Revision: 104716
+- Added spell dicts for: am_AM, ar_AR, az_AZ, bn_BN, cop_EG, csb_CSB, en_ZA,
+  eo_EO, eu_ES, fa_FA, fa_IR, fj_FJ, fur_IT, fy_NL, gd_GB, gsc_FR, he_IL,
+  hi_IN, hy_AM, is_IS, km_KH, ku_TR, la_LA, lv_LV, mg_MG, mn_MN, mr_IN, ne_NP,
+  nr_ZA, ns_ZA, ny_MW, oc_FR, or_OR, pa_PA, qu_BO, rw_RW, ss_ZA, st_ZA, sw_TZ,
+  ta_TA, tet_ID, th_TH, tl_PH, tn_ZA, ts_ZA, uz_UZ, ve_ZA, vi_VI and xh_ZA
+- Added thes dicts for: cs_CZ, de_CH, hu_HU and ru_RU
+
+* Thu Nov 01 2007 Marcelo Ricardo Leitner <mrl@mandriva.com> 1.0.2-13mdv2008.1
++ Revision: 104624
+- Merged myspell-hyph-locale and myspell-thes-locale into myspell-locale
+- Simplified package generating.
+- Dropped support for OOo < 1.0.1
+- Removed the date information from releases and from everywhere else.
+  They are not usefull, as the packages still would be always updated, and
+  it's too hard to update all them.
+- Switch de_DE to de_DE_comb, as OOo used to use it.
+- Fixed locale string in hyph: hu_HU and et_EE.
+- Updated myspell-genpackages so:
+  1) -hyph-xx_YY packages provides the old -hyph-xx
+  2) works with new doc files (full locale)
+- Sorted all sections that expands the script
+- Updated th for pl_PL, sk_SK, it_IT and de_DE.
+- Added hyph for de_CH, en_CA, en_GB, fr_BE, pt_BR and ro_RO.
+- Updated hypn for bg_BG, cs_CZ, da_DK, de_DE, el_GR, en_US, es_ES, fi_FI,
+  fr_FR, ga_IE, id_ID, is_IS, it_IT, lt_LT, nl_NL, pl_PL, pt_PT, ru_RU, sk_SK,
+  sl_SI, sv_SE and uk_UA.
+- Updated dictionaries for: gl_ES, de_CH, it_IT, zu_ZA, es_ES, de_DE, da_DK,
+  hr_HR, pt_BR, es_MX, ms_MY, fo_FO, el_GR, ga_IE, hu_HU, sl_SI, en_US, fr_BE,
+  af_ZA, ro_RO, nb_NO, cs_CZ, pl_PL, nn_NO and sk_SK.
+
+* Thu Sep 13 2007 Andreas Hasenack <andreas@mandriva.com> 1.0.2-12mdv2008.0
++ Revision: 85093
+- ignore expand error that happens during submit because SOURCES is not extracted
+- updated Dutch and Ukranian dictionaries (#23829 and #29650)
+
+
+* Sun Mar 18 2007 Giuseppe GhibÃ² <ghibo@mandriva.com> 1.0.2-11mdv2007.1
++ Revision: 146106
+- Update Dutch hyphen (to release 2004/10/01) and dictionaries,
+  according to the official 2005 dutch spelling reform (bug #29650,
+  report by Reinout van Schouwen).
+- Added %%nil at the end of macro section, to woraround bug #27417.
+- Updated it_IT dict and thesaurus.
+
+* Fri Jan 12 2007 Andreas Hasenack <andreas@mandriva.com> 1.0.2-10mdv2007.1
++ Revision: 107998
+- rebuild
+- Import myspell-dictionaries
+
+* Sat Mar 12 2005 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-9mdk
+- Merged Buchan Milne Patches (bug #13690)
+- updated bugged slovak dictionaries (report by Zdenko Podobny).
+- updated italian Thesaurus.
+- added slovak Thesaurus.
+
+* Thu Sep 23 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-8mdk
+- Removed tn_ZA dictionaries, because locales-tn doesn't exists.
+
+* Sat Sep 11 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-7mdk
+- Rebuilt.
+
+* Sun Aug 29 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-6mdk
+- Fixed a typo for Kiswahili package description.
+- Spellchecking:
+  * UPD: Zulu (South Africa)	[2004/06/04]
+
+* Tue Aug 17 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-5mdk
+- modified myspell-genpackages.sh script for adding thesaurus packages.
+- Hyphenation:
+  * Added NZ, AU, ZA, IE, JM, PH, TT, ZW for hyph_en %%post scripts.
+  * Added AR, BZ, BO, CL, CO, CR, CU, DO, EC, SV, GU, JN, MX, NI, PA, PU,
+  *       PE, PR, UY, VE for hyph_es %%post scripts.
+  * Added AT, LI, LU for hyph_de %%post scripts.
+  * Added CA LU MC CH for hyph_fr %%post scripts.
+  * Added CH for hyph_it %%post scripts.
+  * UPD: hyph_es		[2004/06/02]
+  * UPD: hyph_nl		[2004/02/22]
+  * UPD: hyph_hu		[2003/11/07]
+  * NEW: hyph_id (Indonesian)	[2004/08/10]
+  * NEW: hyph_pl (Polish)	[2003/09/13]
+  * NEW: hyph_pt (Portuguese)	[2003/09/04]
+  * NEW: hyph_el (Greek)	[2004/04/09]
+  * NEW: hyph_bg (Bulgarian)	[2004/04/19]
+  * NEW: hyph_lt (Lithuanian)	[2004/01/11]
+  * NEW: hyph_is (Icelandic)	[2003/09/18]
+  * NEW: hyph_fi (Finnish)	[2003/11/25]
+  * NEW: hyph_ga (Irish)	[2004/02/12]
+- Spellchecking:
+  * UPD: Afrikaans (Africa)	[2004/07/27]
+  * UPD: Polish	(Poland)	[2004/08/16]
+  * NEW: Setswana (Africa)	[2004/05/16]
+  * NEW: Kiswahili (Africa)	[2004/05/16]
+  * UPD: Indonesian (Indonesia) [2004/08/10]
+  * NEW: Malay (Malaysia)	[2003/09/07]
+- Thesaurus:
+  * NEW: English		[2004/04/23]
+  * NEW: French			[2003/08/19]
+  * NEW: Italian		[2004/02/22]
+  * NEW: German			[2004/07/02]
+  * NEW: Spanish		[2004/07/12]
+  * NEW: Polish			[2004/08/03]
+  * NEW: Bulgarian		[2004/04/02]
+
+* Tue Jul 20 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-4mdk
+- Spellchecking:
+  * NEW: Welsh			[2004/04/24]
+  * NEW: English (New Zealand)	[2003/09/07]
+  * UPD: German (Switzerland)	[2003/09/05]
+  * NEW: Indonesian (Indonesia)	[2004/04/26]
+  * NEW: Zulu (South Africa)	[2004/05/16]
+  * NEW: Romanian (Romania)	[2003/10/23]
+  * NEW: Maori (New Zealand)	[2003/09/09]
+
+* Mon Jul 19 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-3mdk
+- Hyphenation
+  * NEW: Estonian		[2004/06/21]
+
+* Mon Jul 19 2004 Giuseppe Ghibò <ghibo@mandrakesoft.com> 1.0.2-2mdk
+- Spellchecking:
+  * NEW: Afrikaans (Africa)	[2003/12/29] (1.99.1)
+  * NEW: Estonian (Estonia)	[2004/06/21]
+  * UPD: Italian (Italy)	[2004/06/23]
+  * UPD: Bulgarian (Bulgaria)	[2004/04/02]
+  * UPD: Czech			[2003/09/07]
+  * UPD: Danish (Denmark)	[2004/06/09]
+  * UPD: Dutch (Nertherland)	[2004/02/22]
+  * UPD: English (GB)		[2004/02/08]
+  * UPD: English (US)		[2004/06/23]
+  * UPD: German (Germany)	[2003/09/05]
+  * UPD: Greek			[2004/04/24]
+  * UPD: Hungarian (Hungary)	[2004/03/31]
+  * UPD: Polish			[2004/07/18]
+  * UPD: Spanish (Spain)	[2004/06/26]
+  * UPD: Slovak			[2004/01/18]
+  * UPD: Norwegian/Bokmål 	[2003/10/13]
+  * UPD: Norwegian/Nynorsk	[2003/10/13]
+  * UPD: Irish (Ireland)	[2004/04/04]
+  * UPD: Galician (Spain)	[2003/09/05]
+  * UPD: Russian (Russia)	[2004/04/06]
+  * UPD: Slovenian (Slovenia)	[2003/09/07]
+  * UPD: Ukrainian (Ukraine)	[2003/10/16]
+  * UPD: German (Austria)	[2003/09/05]
+  * UPD: Faroese		[2004/04/03]
+  * UPD: Lithuanian		[2003/12/31]
+
