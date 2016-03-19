@@ -6,7 +6,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	41
+Release:	42
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		http://lingucomponent.openoffice.org/download_dictionary.html
