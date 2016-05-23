@@ -6,7 +6,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	1.0.2
-Release:	42
+Release:	43
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		http://lingucomponent.openoffice.org/download_dictionary.html
@@ -423,8 +423,8 @@ cd %{buildroot}%{dictdir}
 for file in *.idx *.dat; do
   ln -s $file `echo $file|sed 's/\(.*\)\.\(idx\|dat\)/\1_v2\.\2/' `
 done
-ln -s th_en_US.idx th_en_GB_v2.idx
-ln -s th_en_US.dat th_en_GB_v2.dat
+cp -a th_en_US.idx th_en_GB_v2.idx
+cp -a th_en_US.dat th_en_GB_v2.dat
 cd -
 
 # Install the spell checking dictionary symlinks for mozilla apps
