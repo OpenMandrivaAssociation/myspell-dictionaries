@@ -160,7 +160,7 @@ ISOCODE=${PLANG%%_*} ISOCOUNTRY=${PLANG#*_}
 [[ "$ISOCODE" = "$ISOCOUNTRY" ]] && ISOCOUNTRY=""
 
 case $ISOCODE:$ISOCOUNTRY in
-cop:EG|fj:FJ|la:LA|ny:MW|qu:BO|tet:ID)
+cop:EG|fj:FJ|la:LA|ny:MW|qu:BO|tet:ID|an:ES|gug*|kmr*)
   LOCALECODE=
   ;;
 csb:CSB)
