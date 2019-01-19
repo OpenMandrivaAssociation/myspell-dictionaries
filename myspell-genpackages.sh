@@ -1,5 +1,11 @@
 #!/bin/bash
 
+PLANG=$1
+CONTENTS=$2
+PNAME=$3
+LICENSE=$4
+RENAMED_FROM="$5"
+
 ##
 ## Common section
 ##
@@ -11,7 +17,6 @@ thes=
 EXTRA=
 if [ -z "${CONTENTS/*DICT*}" ]; then
     dict="%doc doc/DICT/$PLANG/*"
-    EXTRA=" -f $PLANG.files"
 fi
 if [ -z "${CONTENTS/*HYPH*}" ]; then
     hyph="%doc doc/HYPH/hyph_$PLANG/*"
@@ -19,6 +24,7 @@ fi
 if [ -z "${CONTENTS/*THES*}" ]; then
     thes="%doc doc/THES/th_$PLANG/*"
 fi
+EXTRA=" -f $PLANG.files"
 cat << EOF
 
 %files -n $PACKAGE$EXTRA
@@ -26,13 +32,6 @@ cat << EOF
 $dict
 $hyph
 $thes
-#avoid marking dictionaries with %lang, to workaround
-#https://qa.mandriva.com/show_bug.cgi?id=42782
-#%lang($ISOCODE) %{dictdir}/*$PLANG*
-%{dictdir}/*$PLANG*
-%dir %{dictdir}
-%dir %{mozdictdir}
-
 EOF
 }
 
@@ -118,15 +117,16 @@ Provides:	myspell-thesaurus = %{version}-%{release}
 fi
 cat << EOF
 %package -n $PACKAGE
-Summary:	$PNAME dictionaries
-Version:	%{version}
-Release:	%{release}
+Summary:	$SHORT_LANGNAME dictionaries
 License:	$LICENSE
 Group:		System/Internationalization
 EOF
 [ -z "$LOCALECODE" ] || cat << EOF
 Provides:	myspell-$LOCALECODE = %{version}-%{release}
 EOF
+for i in $RENAMED_FROM; do
+	echo "%rename $i"
+done
 cat << EOF
 $dict
 $hyph
@@ -139,7 +139,7 @@ cat << EOF
 
 %description -n $PACKAGE
 $PACKAGE contains spell checking data in 
-$PNAME to be used by 
+$SHORT_LANGNAME to be used by 
 OpenOffice.org or MySpell-capable applications like Mozilla.
 With this extension, you can compose a document in
 $SHORT_LANGNAME and check for the typos easily.
@@ -150,11 +150,6 @@ EOF
 ##
 ## Main
 ##
-
-PLANG=$1
-CONTENTS=$2
-PNAME=$3
-LICENSE=$4
 
 [[ -z "$COMMAND$PLANG$PNAME$LICENSE" ]] && {
   echo "%{error: ${0##*/}: Bad arguments}"
