@@ -125,7 +125,7 @@ EOF
 Provides:	myspell-$LOCALECODE = %{version}-%{release}
 EOF
 for i in $RENAMED_FROM; do
-	echo "%rename $i"
+	echo "%rename myspell-$i"
 done
 cat << EOF
 $dict
