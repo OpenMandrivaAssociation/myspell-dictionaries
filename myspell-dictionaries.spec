@@ -1,14 +1,17 @@
 %define dictdir	%{_datadir}/dict/ooo
 %define mozdictdir %{_datadir}/dict/mozilla
 
+%bcond_without qtwebengine
+
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
-Version:	20190119
-Release:	2
+Version:	20190630
+Release:	1
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		http://lingucomponent.openoffice.org/download_dictionary.html
 # https://gerrit.libreoffice.org/plugins/gitiles/dictionaries/+/master
+# git clone https://git.libreoffice.org/dictionaries
 Source0:	dictionaries-%{version}.tar.xz
 
 ##
@@ -65,6 +68,10 @@ BuildArch:	noarch
 BuildRequires:	unzip
 
 Source10000:	myspell-genpackages.sh
+
+%if %{with qtwebengine}
+BuildRequires:	qt5-qtwebengine
+%endif
 
 
 %description
@@ -195,6 +202,9 @@ done
 
 %install
 mkdir -p %{buildroot}%{_datadir}/dict/ooo %{buildroot}%{_datadir}/dict/mozilla
+%if %{with qtwebengine}
+mkdir -p %{buildroot}%{_datadir}/qt5/qtwebengine_dictionaries
+%endif
 for i in *; do
 	[ -d "$i" ] || continue
 	[ "$i" = "util" ] && continue
@@ -215,6 +225,11 @@ for i in *; do
 		if echo $b |grep -q '^hyph'; then
 			HAVE_HYPH=true
 		else
+%if %{with qtwebengine}
+			if echo $j |grep -q '.dic$'; then
+				%{_libdir}/qt5/bin/qwebengine_convert_dict $j %{buildroot}%{_datadir}/qt5/qtwebengine_dictionaries/${b/.dic/.bdic} && echo %{_datadir}/qt5/qtwebengine_dictionaries/${b/.dic/.bdic} >>../$i.files || :
+			fi
+%endif
 			HAVE_DICT=true
 		fi
 	done
