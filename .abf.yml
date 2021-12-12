@@ -1,5 +1,5 @@
 sources:
-  dictionaries-20190630.tar.xz: 61fe9deef3a131fa3cab8a0fb65ba15909366c5a
+  dictionaries-20211213.tar.xz: e0b12d3df9067a60de230d6a1b0c4401ca5c2731
   am_AM.zip: 08ed827e3499ef7930dd56cbf64ea0f172b3d1e4
   az_AZ.zip: be114dbc94e12dbe79646f13c775802e18115eb4
   cop_EG.zip: b10d325278a9c55c794473d5b28a13341d8c9b4f
@@ -23,7 +23,6 @@ sources:
   la_LA.zip: c2e308d8adb1cbe1aecfc1549137637b3627a910
   mg_MG.zip: 1dffc732ebd59af2107fde2c17619b2a6fdce2a9
   mi_NZ.zip: e3ddb03db770a50da706936a8fa64146cd6170a7
-  mn_MN.zip: 7dceab0ada3802405454c33ea97b757561681918
   mr_IN.zip: 64451ee730cfbf19e957b8167152c8d2a501ba52
   ms_MY.zip: 12c033608d031ded21219757ac26f3b5bc0d37d7
   nr_ZA.zip: 1780928a725ba77f8495b172cd08e81a8f266775

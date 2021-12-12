@@ -5,7 +5,7 @@
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
-Version:	20190630
+Version:	20211213
 Release:	1
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
@@ -23,7 +23,6 @@ Source2:	az_AZ.zip
 Source3:	cop_EG.zip
 Source4:	csb_CSB.zip
 Source5:	cy_GB.zip
-Source6:	eo_EO.zip
 Source7:	eu_ES.zip
 Source8:	fa_FA.zip
 Source9:	fa_IR.zip
@@ -38,7 +37,6 @@ Source17:	km_KH.zip
 Source18:	la_LA.zip
 Source19:	mg_MG.zip
 Source20:	mi_NZ.zip
-Source21:	mn_MN.zip
 Source22:	mr_IN.zip
 Source23:	ms_MY.zip
 Source24:	nr_ZA.zip
@@ -100,7 +98,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} de "DICT HYPH THES" "German" GPL "de_AT de_CH de_DE" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} el_GR "DICT HYPH     " "Greek (Greece)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} en "DICT HYPH THES" "English" BSD "en_AU en_CA en_GB en_NZ en_US en_ZA" 2>/dev/null )}
-%{expand:%(/bin/sh %{S:10000} eo_EO "DICT          " "Esperanto (anywhere)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} eo "DICT HYPH THES" "Esperanto (anywhere)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} es "DICT HYPH THES" "Spanish" GPL "es_ES es_MX" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} et_EE "DICT HYPH     " "Estonian (Estonia)" "free, see http://www.eki.ee/eki/licence.html" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} eu_ES "DICT          " "Basque" "Check readme" 2>/dev/null )}
@@ -128,6 +126,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} is "DICT HYPH     " "Icelandic" LGPL is_IS 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} it_IT "DICT HYPH THES" "Italian (Italy)" LGPL/GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} km_KH "DICT          " "Khmer (Cambodia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} ko_KR "DICT          " "Korean" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} kmr_Latn "DICT          " "Kurdish" "Check readme" ku_TR 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} la_LA "DICT          " "Latin (x-register)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} lo_LA "DICT          " "Lao" "Check readme" 2>/dev/null )}
@@ -181,7 +180,7 @@ a particular set of languages.
 
 %prep
 %autosetup -p1 -n dictionaries
-for i in %{S:1} %{S:2} %{S:3} %{S:4} %{S:5} %{S:6} %{S:7} %{S:8} %{S:9} %{S:10} %{S:11} %{S:12} %{S:13} %{S:14} %{S:15} %{S:16} %{S:17} %{S:18} %{S:19} %{S:20} %{S:21} %{S:22} %{S:23} %{S:24} %{S:25} %{S:26} %{S:27} %{S:28} %{S:29} %{S:30} %{S:31} %{S:32} %{S:33} %{S:34} %{S:35} %{S:36} %{S:37} %{S:38} %{S:39} %{S:40} %{S:41} %{S:42}; do
+for i in %{S:1} %{S:2} %{S:3} %{S:4} %{S:5} %{S:7} %{S:8} %{S:9} %{S:10} %{S:11} %{S:12} %{S:13} %{S:14} %{S:15} %{S:16} %{S:17} %{S:18} %{S:19} %{S:20} %{S:22} %{S:23} %{S:24} %{S:25} %{S:26} %{S:27} %{S:28} %{S:29} %{S:30} %{S:31} %{S:32} %{S:33} %{S:34} %{S:35} %{S:36} %{S:37} %{S:38} %{S:39} %{S:40} %{S:41} %{S:42}; do
 	LNG=$(basename $i .zip)
 	mkdir -p $LNG
 	cd $LNG
