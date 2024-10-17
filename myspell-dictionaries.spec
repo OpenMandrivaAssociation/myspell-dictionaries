@@ -9,7 +9,7 @@ Version:	20211213
 Release:	2
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
-Url:		http://lingucomponent.openoffice.org/download_dictionary.html
+Url:		https://lingucomponent.openoffice.org/download_dictionary.html
 # https://gerrit.libreoffice.org/plugins/gitiles/dictionaries/+/master
 # git clone https://git.libreoffice.org/dictionaries
 Source0:	dictionaries-%{version}.tar.xz
