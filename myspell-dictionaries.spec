@@ -2,6 +2,7 @@
 %define mozdictdir %{_datadir}/dict/mozilla
 
 %bcond_without qtwebengine
+%undefine _debugsource_packages
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
@@ -58,7 +59,6 @@ Source36:	zu_ZA.zip
 Source50:	hyph_fi_FI.zip
 Source51:	hyph_fr_BE.zip
 Source52:	hyph_ga_IE.zip
-BuildArch:	noarch
 BuildRequires:	unzip
 
 Source10000:	myspell-genpackages.sh
@@ -66,6 +66,9 @@ Source10000:	myspell-genpackages.sh
 %if %{with qtwebengine}
 BuildRequires:	cmake(Qt6WebEngineCore)
 %endif
+
+# We currently can't be noarch because QtWebEngine dictionaries go to
+# %{_qtdir}/... -- which may differ between architectures (lib vs lib64)
 
 
 %description
@@ -202,7 +205,7 @@ done
 %install
 mkdir -p %{buildroot}%{_datadir}/dict/ooo %{buildroot}%{_datadir}/dict/mozilla
 %if %{with qtwebengine}
-mkdir -p %{buildroot}%{_datadir}/qt6/qtwebengine_dictionaries
+mkdir -p %{buildroot}%{_qtdir}/qtwebengine_dictionaries
 %endif
 for i in *; do
 	[ -d "$i" ] || continue
@@ -226,7 +229,7 @@ for i in *; do
 		else
 %if %{with qtwebengine}
 			if echo $j |grep -q '.dic$'; then
-				%{_libdir}/qt6/libexec/qwebengine_convert_dict $j %{buildroot}%{_datadir}/qt6/qtwebengine_dictionaries/${b/.dic/.bdic} && echo %{_datadir}/qt6/qtwebengine_dictionaries/${b/.dic/.bdic} >>../$i.files || :
+				%{_qtdir}/libexec/qwebengine_convert_dict $j %{buildroot}%{_qtdir}/qtwebengine_dictionaries/${b/.dic/.bdic} && echo %{_qtdir}/qtwebengine_dictionaries/${b/.dic/.bdic} >>../$i.files || :
 			fi
 %endif
 			HAVE_DICT=true
