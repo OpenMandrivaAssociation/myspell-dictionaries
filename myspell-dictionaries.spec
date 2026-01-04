@@ -5,14 +5,14 @@
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
-Version:	20211213
-Release:	2
+Version:	26.2.0.1
+Release:	1
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		https://lingucomponent.openoffice.org/download_dictionary.html
 # https://gerrit.libreoffice.org/plugins/gitiles/dictionaries/+/master
 # git clone https://git.libreoffice.org/dictionaries
-Source0:	dictionaries-%{version}.tar.xz
+Source0:	https://dev-builds.libreoffice.org/pre-releases/src/libreoffice-dictionaries-%{version}.tar.xz
 
 ##
 ## Sources for additional spell checking dictionaries
@@ -23,41 +23,37 @@ Source2:	az_AZ.zip
 Source3:	cop_EG.zip
 Source4:	csb_CSB.zip
 Source5:	cy_GB.zip
-Source7:	eu_ES.zip
-Source8:	fa_FA.zip
-Source9:	fa_IR.zip
-Source10:	fj_FJ.zip
-Source11:	fo_FO.zip
-Source12:	fur_IT.zip
-Source13:	fy_NL.zip
-Source14:	ga_IE.zip
-Source15:	gsc_FR.zip
-Source16:	hy_AM.zip
-Source17:	km_KH.zip
-Source18:	la_LA.zip
-Source19:	mg_MG.zip
-Source20:	mi_NZ.zip
-Source22:	mr_IN.zip
-Source23:	ms_MY.zip
-Source24:	nr_ZA.zip
-Source25:	ns_ZA.zip
-Source26:	ny_MW.zip
-Source27:	or_OR.zip
-Source28:	pa_PA.zip
-Source29:	qu_BO.zip
-Source30:	rw_RW.zip
-Source31:	ss_ZA.zip
-Source32:	st_ZA.zip
-Source33:	sw_KE.zip
-Source34:	ta_TA.zip
-Source35:	tet_ID.zip
-Source36:	tl_PH.zip
-Source37:	tn_ZA.zip
-Source38:	ts_ZA.zip
-Source39:	uz_UZ.zip
-Source40:	ve_ZA.zip
-Source41:	xh_ZA.zip
-Source42:	zu_ZA.zip
+Source6:	eu_ES.zip
+Source7:	fa_FA.zip
+Source8:	fa_IR.zip
+Source9:	fj_FJ.zip
+Source10:	fo_FO.zip
+Source11:	fur_IT.zip
+Source12:	fy_NL.zip
+Source13:	ga_IE.zip
+Source14:	gsc_FR.zip
+Source15:	hy_AM.zip
+Source16:	km_KH.zip
+Source17:	la_LA.zip
+Source18:	mg_MG.zip
+Source19:	mi_NZ.zip
+Source20:	ms_MY.zip
+Source21:	nr_ZA.zip
+Source22:	ns_ZA.zip
+Source23:	ny_MW.zip
+Source24:	qu_BO.zip
+Source25:	rw_RW.zip
+Source26:	ss_ZA.zip
+Source27:	st_ZA.zip
+Source28:	sw_KE.zip
+Source29:	tet_ID.zip
+Source30:	tl_PH.zip
+Source31:	tn_ZA.zip
+Source32:	ts_ZA.zip
+Source33:	uz_UZ.zip
+Source34:	ve_ZA.zip
+Source35:	xh_ZA.zip
+Source36:	zu_ZA.zip
 
 Source50:	hyph_fi_FI.zip
 Source51:	hyph_fr_BE.zip
@@ -68,7 +64,7 @@ BuildRequires:	unzip
 Source10000:	myspell-genpackages.sh
 
 %if %{with qtwebengine}
-BuildRequires:	qt5-qtwebengine
+BuildRequires:	cmake(Qt6WebEngineCore)
 %endif
 
 
@@ -82,6 +78,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} am_AM "DICT          " "Amharic (Ethiopia)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} an_ES "DICT          " "Aragonese" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} ar "DICT          " "Arabic (North Africa and Middle East)" "Check readme" ar_AR 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} as_IN "DICT HYPH     " "Assamese" "Check readme" ar_AR 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} az_AZ "DICT          " "Azerbaijani (Azerbaijan)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} be_BY "DICT          " "Belarusian" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} bg_BG "DICT          " "Bulgarian (Bulgaria)" GPL 2>/dev/null )}
@@ -93,6 +90,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} cop_EG "DICT          " "Coptic (North Africa)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} cs_CZ "DICT HYPH THES" "Czech (Czech Republic)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} csb_CSB "DICT          " "Kashubian (Poland)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} ckb "DICT          " "Central Kurdish" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} cy_GB "DICT          " "Welsh (Wales)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} da_DK "DICT HYPH     " "Danish (Denmark)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} de "DICT HYPH THES" "German" GPL "de_AT de_CH de_DE" 2>/dev/null )}
@@ -126,6 +124,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} is "DICT HYPH     " "Icelandic" LGPL is_IS 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} it_IT "DICT HYPH THES" "Italian (Italy)" LGPL/GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} km_KH "DICT          " "Khmer (Cambodia)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} kn_IN "DICT          " "Kannada (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} ko_KR "DICT          " "Korean" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} kmr_Latn "DICT          " "Kurdish" "Check readme" ku_TR 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} la_LA "DICT          " "Latin (x-register)" "Check readme" 2>/dev/null )}
@@ -144,8 +143,8 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} ns_ZA "DICT          " "Northern Sotho (South Africa)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} ny_MW "DICT          " "Chichewa (Malawi)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} oc_FR "DICT          " "Occitan (France)" "Check readme" 2>/dev/null )}
-%{expand:%(/bin/sh %{S:10000} or_OR "DICT          " "Oriya (India)" "Check readme" 2>/dev/null )}
-%{expand:%(/bin/sh %{S:10000} pa_PA "DICT          " "Punjabi (India)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} or_IN "DICT          " "Oriya (India)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} pa_IN "              " "Punjabi (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} pl_PL "DICT HYPH THES" "Polish (Poland)" "Creative Commons ShareAlike, http://creativecommons.org/licenses/sa/1.0" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} pt_BR "DICT HYPH     " "Portuguese (Brasil)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} pt_PT "DICT HYPH     " "Portuguese (Portugal)" GPL 2>/dev/null )}
@@ -153,6 +152,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} ro    "DICT HYPH     " "Romanian" GPL ro_RO 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} ru_RU "DICT HYPH THES" "Russian (Russia)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} rw_RW "DICT          " "Kinyarwanda (Rwanda)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} sa_IN "              " "Sanskrit" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} si_LK "DICT          " "Sinhala" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} sk_SK "DICT HYPH THES" "Slovak (Slovak Republic)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} sl_SI "DICT HYPH     " "Slovenian (Slovenia)" BSD-like 2>/dev/null )}
@@ -163,7 +163,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} sv_SE "DICT HYPH     " "Swedish (Sweden)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} sw_KE "DICT          " "Kiswahili (Africa)" LGPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} sw_TZ "DICT          " "Kiswahili (East Africa) Extended Wordlist" "Check readme" 2>/dev/null )}
-%{expand:%(/bin/sh %{S:10000} ta_TA "DICT          " "Tamil (India)" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} ta_IN "DICT          " "Tamil (India)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} te_IN "DICT          " "Telugu" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} tet_ID "DICT          " "Tetum (Indonesia)" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} th_TH "DICT          " "Thai (Thailand)" "Check readme" 2>/dev/null )}
@@ -179,8 +179,8 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} zu_ZA "DICT          " "Zulu (South Africa)" LGPL 2>/dev/null )}
 
 %prep
-%autosetup -p1 -n dictionaries
-for i in %{S:1} %{S:2} %{S:3} %{S:4} %{S:5} %{S:7} %{S:8} %{S:9} %{S:10} %{S:11} %{S:12} %{S:13} %{S:14} %{S:15} %{S:16} %{S:17} %{S:18} %{S:19} %{S:20} %{S:22} %{S:23} %{S:24} %{S:25} %{S:26} %{S:27} %{S:28} %{S:29} %{S:30} %{S:31} %{S:32} %{S:33} %{S:34} %{S:35} %{S:36} %{S:37} %{S:38} %{S:39} %{S:40} %{S:41} %{S:42}; do
+%autosetup -p1 -n libreoffice-%{version}/dictionaries
+for i in %{S:1} %{S:2} %{S:3} %{S:4} %{S:5} %{S:6} %{S:7} %{S:8} %{S:9} %{S:10} %{S:11} %{S:12} %{S:13} %{S:14} %{S:15} %{S:16} %{S:17} %{S:18} %{S:19} %{S:20} %{S:21} %{S:22} %{S:23} %{S:24} %{S:25} %{S:26} %{S:27} %{S:28} %{S:29} %{S:30} %{S:31} %{S:32} %{S:33} %{S:34} %{S:35} %{S:36}; do
 	LNG=$(basename $i .zip)
 	mkdir -p $LNG
 	cd $LNG
@@ -202,7 +202,7 @@ done
 %install
 mkdir -p %{buildroot}%{_datadir}/dict/ooo %{buildroot}%{_datadir}/dict/mozilla
 %if %{with qtwebengine}
-mkdir -p %{buildroot}%{_datadir}/qt5/qtwebengine_dictionaries
+mkdir -p %{buildroot}%{_datadir}/qt6/qtwebengine_dictionaries
 %endif
 for i in *; do
 	[ -d "$i" ] || continue
@@ -226,7 +226,7 @@ for i in *; do
 		else
 %if %{with qtwebengine}
 			if echo $j |grep -q '.dic$'; then
-				%{_libdir}/qt5/bin/qwebengine_convert_dict $j %{buildroot}%{_datadir}/qt5/qtwebengine_dictionaries/${b/.dic/.bdic} && echo %{_datadir}/qt5/qtwebengine_dictionaries/${b/.dic/.bdic} >>../$i.files || :
+				%{_libdir}/qt6/libexec/qwebengine_convert_dict $j %{buildroot}%{_datadir}/qt6/qtwebengine_dictionaries/${b/.dic/.bdic} && echo %{_datadir}/qt6/qtwebengine_dictionaries/${b/.dic/.bdic} >>../$i.files || :
 			fi
 %endif
 			HAVE_DICT=true
