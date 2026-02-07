@@ -6,7 +6,7 @@
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
-Version:	26.2.0.1
+Version:	26.2.1.1
 Release:	1
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
