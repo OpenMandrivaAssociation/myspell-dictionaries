@@ -1,5 +1,4 @@
 sources:
-  libreoffice-dictionaries-26.2.1.1.tar.xz: 43a1eb30bc49cad613a1ab8a13bcfc95fb8aed76
   am_AM.zip: 08ed827e3499ef7930dd56cbf64ea0f172b3d1e4
   az_AZ.zip: be114dbc94e12dbe79646f13c775802e18115eb4
   cop_EG.zip: b10d325278a9c55c794473d5b28a13341d8c9b4f
@@ -40,3 +39,4 @@ sources:
   ve_ZA.zip: 4a33bcd3919c1dc61ffeca576f2df307fbe8b65e
   xh_ZA.zip: 3f5e744ec35164af365f4fa839c3f5cdd8615b66
   zu_ZA.zip: b259f261b15fbdab9c157fd94aa60b0abfc94597
+  libreoffice-dictionaries-26.2.2.1.tar.xz: ceff810615a9c9688b197e7459689d9615f855e4
