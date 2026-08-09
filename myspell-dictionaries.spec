@@ -7,7 +7,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	26.2.2.1
-Release:	1
+Release:	2
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		https://lingucomponent.openoffice.org/download_dictionary.html
@@ -60,6 +60,7 @@ Source50:	hyph_fi_FI.zip
 Source51:	hyph_fr_BE.zip
 Source52:	hyph_ga_IE.zip
 BuildRequires:	unzip
+BuildRequires: fdupes
 
 Source10000:	myspell-genpackages.sh
 
@@ -203,7 +204,7 @@ done
 # Nothing to do here...
 
 %install
-mkdir -p %{buildroot}%{_datadir}/dict/ooo %{buildroot}%{_datadir}/dict/mozilla
+mkdir -p %{buildroot}%{_datadir}/dict/ooo %{buildroot}%{_datadir}/dict/mozilla %{buildroot}%{_datadir}/hunspell
 %if %{with qtwebengine}
 mkdir -p %{buildroot}%{_qtdir}/qtwebengine_dictionaries
 %endif
@@ -227,6 +228,9 @@ for i in *; do
 		if echo $b |grep -q '^hyph'; then
 			HAVE_HYPH=true
 		else
+			#Makes spelling dictionaries visible to hunspell
+			ln -s ../dict/ooo/$b %{buildroot}%{_datadir}/hunspell/$b
+			echo %{_datadir}/hunspell/$b >>../$i.files
 %if %{with qtwebengine}
 			if echo $j |grep -q '.dic$'; then
 				%{_qtdir}/libexec/qwebengine_convert_dict $j %{buildroot}%{_qtdir}/qtwebengine_dictionaries/${b/.dic/.bdic} && echo %{_qtdir}/qtwebengine_dictionaries/${b/.dic/.bdic} >>../$i.files || :
@@ -267,3 +271,17 @@ for i in *; do
 
 	cd ..
 done
+
+# Fix dup0licate files
+%fdupes %{buildroot}%{_datadir}/dict
+%if %{with qtwebengine}
+%fdupes %{buildroot}%{_qtdir}/qtwebengine_dictionaries
+%endif
+
+# Fix RPMLint errors related to executable-pers
+find %{buildroot}%{_datadir}/dict -type f -exec chmod 0644 {} +
+find doc -type f -exec chmod 0644 {} +
+
+# Fix wrong-file-end-ofline-encoding errors
+find doc -type f \( -name 'README*' -o -name '*.txt' -o -name '*.xcu' -o -name '*.xml' \) \
+    -exec sed -i 's/\r$//' {} +

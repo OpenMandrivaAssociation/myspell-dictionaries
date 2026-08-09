@@ -1,0 +1,10 @@
+# Filters language names being seen as mispelled
+addFilter(r"spelling-error.*Summary\(en_US\)")
+# Filters noarch qtwebengine warning
+addFilter(r"only-non-binary-in-usr-lib")
+# Filters FSF postal address in GPL headers (.aff and READMEs)
+addFilter(r"incorrect-fsf-address")
+# Filters READMEs shipped in 8-bit encodings
+addFilter(r"file-not-utf8")
+# Did not find locales-gug in repos and does not seem necessary
+addFilter(r"no-dependency-on locales-gug")
