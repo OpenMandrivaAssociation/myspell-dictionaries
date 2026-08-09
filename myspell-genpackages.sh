@@ -35,44 +35,44 @@ $thes
 EOF
 }
 
-function GeneratePackageScripts() {
-echo "%post -n $PACKAGE"
-for ptype in $CONTENTS; do
-    if [ $ptype == "DICT" ]; then
-	FILE="$PLANG"
-    else
-	FILE="$(echo ${ptype/THES/th} | tr [A-Z] [a-z])_$PLANG"
-    fi
+#function GeneratePackageScripts() {
+#echo "%post -n $PACKAGE"
+#for ptype in $CONTENTS; do
+#    if [ $ptype == "DICT" ]; then
+#	FILE="$PLANG"
+#    else
+#	FILE="$(echo ${ptype/THES/th} | tr [A-Z] [a-z])_$PLANG"
+#    fi
 
-    for country in $ISOCOUNTRY; do
-	cat << EOF
-if [[ ! -f "%{dictdir}/dictionary.lst" ]] || \
-      ! grep -q "^$ptype[ \t]*$ISOCODE[ \t]*$country[ \t]*$FILE" %{dictdir}/dictionary.lst
-then
-  echo "$ptype $ISOCODE $country $FILE" >> %{dictdir}/dictionary.lst
-fi
-EOF
-    done
-done
+#    for country in $ISOCOUNTRY; do
+#	cat << EOF
+#if [[ ! -f "%{dictdir}/dictionary.lst" ]] || \
+#      ! grep -q "^$ptype[ \t]*$ISOCODE[ \t]*$country[ \t]*$FILE" %{dictdir}/dictionary.lst
+#then
+#  echo "$ptype $ISOCODE $country $FILE" >> %{dictdir}/dictionary.lst
+#fi
+#EOF
+#    done
+#done
 
-echo
-echo "%preun -n $PACKAGE"
-for ptype in $CONTENTS; do
-    if [ $ptype == "DICT" ]; then
-	FILE="$PLANG"
-    else
-	FILE="$(echo ${ptype/THES/th} | tr [A-Z] [a-z])_$PLANG"
-    fi
-
-    for country in $ISOCOUNTRY; do
-	cat << EOF
-if [[ "\$1" = "0" ]]; then
-  perl -ni -e "/^$ptype\s*$ISOCODE\s*$country\s*$FILE\$/ or print" %{dictdir}/dictionary.lst
-fi
-EOF
-    done
-done
-}
+#echo
+#echo "%preun -n $PACKAGE"
+#for ptype in $CONTENTS; do
+#    if [ $ptype == "DICT" ]; then
+#	FILE="$PLANG"
+#    else
+#	FILE="$(echo ${ptype/THES/th} | tr [A-Z] [a-z])_$PLANG"
+#    fi
+#
+#    for country in $ISOCOUNTRY; do
+#	cat << EOF
+#if [[ "\$1" = "0" ]]; then
+#  perl -ni -e "/^$ptype\s*$ISOCODE\s*$country\s*$FILE\$/ or print" %{dictdir}/dictionary.lst
+#fi
+#EOF
+#    done
+#done
+#}
 
 ##
 ## Handle PackageInfo
@@ -186,7 +186,7 @@ SHORT_LANGNAME=`echo "$PNAME" | sed -e "s/\([A-Z][^ ]*\).*/\1/"`
 GeneratePackageInfo
 
 #ISOCOUNTRY="$PLANG"
-GeneratePackageScripts
+#GeneratePackageScripts
 
 GeneratePackageFilelist
 
