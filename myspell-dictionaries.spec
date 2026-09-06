@@ -7,7 +7,7 @@
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
 Version:	26.8.0.3
-Release:	1
+Release:	2
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		https://lingucomponent.openoffice.org/download_dictionary.html
@@ -90,7 +90,7 @@ a particular set of languages.
 %{expand:%(/bin/sh %{S:10000} bg_BG "DICT          " "Bulgarian (Bulgaria)" GPL 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} bn_BD "DICT          " "Bengali (India)" "Check readme" bn_BN 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} bo "DICT          " "Classical Tibetan" "Check readme" 2>/dev/null )}
-%{expand:%(/bin/sh %{S:10000} br_FR "DICT          " "Breton" "Check readme" 2>/dev/null )}
+%{expand:%(/bin/sh %{S:10000} br_FR "DICT          " "Breton" "Check readme" br 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} bs_BA "DICT          " "Bosnian" "Check readme" 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} ca "DICT          " "Catalan" GPL ca_ES 2>/dev/null )}
 %{expand:%(/bin/sh %{S:10000} cop_EG "DICT          " "Coptic (North Africa)" "Check readme" 2>/dev/null )}
