@@ -6,14 +6,16 @@
 
 Summary:	MySpell Spelling and Hyphenation dictionaries
 Name:		myspell-dictionaries
-Version:	26.2.2.1
-Release:	2
+Version:	26.8.0.3
+Release:	1
 License:	BSD/GPL/LGPL
 Group:		System/Internationalization
 Url:		https://lingucomponent.openoffice.org/download_dictionary.html
 # https://gerrit.libreoffice.org/plugins/gitiles/dictionaries/+/master
 # git clone https://git.libreoffice.org/dictionaries
-Source0:	https://dev-builds.libreoffice.org/pre-releases/src/libreoffice-dictionaries-%{version}.tar.xz
+# Official tarballs live under the 3-component version (26.8.0), not 26.8.0.3
+%define lo_srcver	26.8.0
+Source0:	https://download.documentfoundation.org/libreoffice/src/%{lo_srcver}/libreoffice-dictionaries-%{version}.tar.xz
 
 ##
 ## Sources for additional spell checking dictionaries
